@@ -1,0 +1,59 @@
+.Services{
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    & .ServicesTitle{
+        grid-column: ~"1/4";
+        grid-row: ~"1/2";
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        .transparent();
+        border-radius: 0;
+    }
+    & .ServicesElement{
+        width: 100%;
+        grid-column: ~"2/3";
+        grid-row: ~"2/3";
+        .flex();
+        flex-wrap: wrap;
+    }
+    & .ServicesButton{
+        grid-column: ~"2/3";
+        grid-row: ~"3/4";
+        .btn(normal);
+    }       
+}
+@media screen and (max-width: @tablet1){
+    .Services{
+        grid-template-columns: 1fr 10fr 1fr;   
+        & .ServicesElement{
+            grid-column: ~"1/4";
+        } 
+    }
+}
+@media screen and (max-width: @tablet2){
+    
+}
+@media screen and (max-width: @tablet3){
+    .Services{
+        & .ServicesElement{
+            grid-column: ~"1/4";
+        }  
+        
+    }
+}
+@media screen and (max-width: @movil1){
+    
+}
+@media screen and (max-width: @movil2){
+    
+}
+@media screen and (max-width: @movil3){
+    
+}

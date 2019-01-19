@@ -1,0 +1,66 @@
+.Competitions{
+    .flex(center);
+    flex-direction: column;
+    width: 100%;
+    // background: fadeout(@morado, @fadeout1);
+    margin: 25px 0;
+    & .CompetitionsTitle{
+        text-align: center;
+        width: 100%;
+        .transparent();
+        border-radius: 0;
+        padding: 10px 0;
+        margin-bottom: 25px;
+    }
+    & .CompetitionsResumeElement{
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        width: 100%;
+        & .CompetitionsResume{
+            grid-column: ~"2/3";
+            .flex();
+            // align-items: flex-start;
+            padding: 7px;
+            flex-direction: column;
+            // .border(black);
+            border-radius: @radius3; 
+            // padding: 7px;
+            margin: 10px 0;
+            .transparent();
+            border-radius: @radius3;
+            & .CompetitionsResumeTitle{
+                // width: 100%;
+                text-align: center;
+                // background: url("../../images/crater.jpg");
+                // background-size: 100%;
+                // background-attachment: fixed;
+                .background();
+                border-radius: @radius3;
+                padding: 15px;
+                color: @turquesa;
+                .icon();
+                .border(@morado);
+                // .onlyBorder(bottom);
+            }
+            & .CompetitionsDetailsElement{
+                .flex();
+                flex-wrap: wrap;
+                width: 100%;
+                // background: fadeout(black, @fadeout3);
+                
+                & .CompetitionsDetail{
+                    // .transparent(@shadow3, 0);
+                    border-radius: @radius3;
+                    padding: 7px;
+                    margin: 12px;
+                    & .CompetitionsDetailTitle{
+                        font-family: @font1 !important;
+                        .icon(false,false);
+                    }
+                    
+                }
+            }
+           
+        }
+    }
+}

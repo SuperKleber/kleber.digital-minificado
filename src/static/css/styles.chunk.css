@@ -1,0 +1,890 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url(/_next/static/fonts/icomoon-a205af2da46ca467980c168ae5330dbf.eot);
+  src:  url(/_next/static/fonts/icomoon-a205af2da46ca467980c168ae5330dbf.eot#iefix) format('embedded-opentype'),
+    url(/_next/static/fonts/icomoon-74f64ef5fb2ea102a07f22dcf2b8818a.ttf) format('truetype'),
+    url(/_next/static/fonts/icomoon-fb35fc9127add02750da652bb8d8d3f2.woff) format('woff'),
+    url(/_next/static/images/icomoon-6ffd4a2dd23dc02877976f930f3d98ca.svg#icomoon) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-microphone:before {
+  content: "\E908";
+}
+.icon-voice:before {
+  content: "\E908";
+}
+.icon-record:before {
+  content: "\E908";
+}
+.icon-graduation-cap:before {
+  content: "\E909";
+}
+.icon-designernews:before {
+  content: "\E90A";
+  color: #2d72d9;
+}
+.icon-csswizardry:before {
+  content: "\E900";
+  color: #f43059;
+}
+.icon-css3:before {
+  content: "\E901";
+  color: #1572b6;
+}
+.icon-bootstrap:before {
+  content: "\E902";
+  color: #563d7c;
+}
+.icon-javascript:before {
+  content: "\E903";
+  color: #f7df1e;
+}
+.icon-mysql:before {
+  content: "\E904";
+  color: #4479a1;
+}
+.icon-php:before {
+  content: "\E905";
+  color: #777bb4;
+}
+.icon-node-dot-js:before {
+  content: "\E906";
+  color: #393;
+}
+.icon-react:before {
+  content: "\E907";
+  color: #61dafb;
+}
+.icon-mic:before {
+  content: "\E91E";
+}
+.icon-profile:before {
+  content: "\E923";
+}
+.icon-file-text2:before {
+  content: "\E926";
+}
+.icon-display:before {
+  content: "\E956";
+}
+.icon-mobile:before {
+  content: "\E958";
+}
+.icon-tablet:before {
+  content: "\E95A";
+}
+.icon-database:before {
+  content: "\E964";
+}
+.icon-bubble:before {
+  content: "\E96B";
+}
+.icon-menu:before {
+  content: "\E9BD";
+}
+.icon-cloud:before {
+  content: "\E9C1";
+}
+.icon-star-full:before {
+  content: "\E9D9";
+}
+.icon-heart:before {
+  content: "\E9DA";
+}
+.icon-point-up:before {
+  content: "\EA03";
+}
+.icon-cancel-circle:before {
+  content: "\EA0D";
+}
+.icon-embed2:before {
+  content: "\EA80";
+}
+.icon-google:before {
+  content: "\EA88";
+}
+.icon-facebook:before {
+  content: "\EA90";
+}
+.icon-facebook2:before {
+  content: "\EA91";
+}
+.icon-instagram:before {
+  content: "\EA92";
+}
+.icon-whatsapp:before {
+  content: "\EA93";
+}
+.icon-github:before {
+  content: "\EAB0";
+}
+.icon-npm:before {
+  content: "\EAB1";
+}
+.icon-trello:before {
+  content: "\EAB3";
+}
+.icon-file-pdf:before {
+  content: "\EADF";
+}
+.icon-html-five2:before {
+  content: "\EAE5";
+}
+.icon-css31:before {
+  content: "\EAE6";
+}
+.icon-codepen:before {
+  content: "\EAE8";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Montserrat';
+  color: aliceblue;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+body {
+  margin: 0;
+  background: url(/_next/static/images/crater-0693db4feb0df267657168ce14452d9c.jpg);
+  background-attachment: fixed;
+  background-size: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+body:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(0, 255, 246, 0.7), transparent);
+  animation-fill-mode: forwards;
+  display: block;
+  z-index: -1;
+}
+@keyframes changeFilter {
+  from {
+    background: rgba(0, 255, 246, 0.7);
+  }
+  to {
+    background: rgba(0, 255, 246, 0.3);
+  }
+}
+@media screen and (max-width: 604px) {
+  body {
+    background: url(/_next/static/images/textura-amarilla-900acbfd9202829848cb3f2078d28797.png);
+  }
+  body:before {
+    background: linear-gradient(to right, transparent, rgba(0, 255, 246, 0.7));
+  }
+}
+.Card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px 5px;
+  padding: 0 15px;
+  background: linear-gradient(to right, rgba(240, 248, 255, 0.3), transparent, transparent, transparent, transparent);
+  box-shadow: 5px 5px 15px 1px black;
+  border-radius: 30px;
+  text-shadow: 1.5px 1.5px 1px black;
+  cursor: pointer;
+  height: 300px;
+  width: auto;
+}
+.Card .ImageContent {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/_next/static/images/crater-0693db4feb0df267657168ce14452d9c.jpg);
+  background-attachment: fixed;
+  background-size: 100%;
+  border-radius: 50%;
+  border: 2px solid #55345b;
+}
+.Card .ImageContent .CardImage {
+  width: 150px;
+  height: auto;
+}
+.Card .CardContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0 0 30px 30px;
+}
+.Card .CardContent .CardText {
+  font-size: 15px;
+  font-family: 'Montserrat';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+@media screen and (max-width: 801px) {
+  .Card {
+    flex-direction: initial;
+    padding: 30px;
+    height: auto;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    width: 100%;
+  }
+  .Card .ImageContent {
+    background: none;
+    border: none;
+    box-shadow: 2px 2px 2px 0px black;
+    width: 150px;
+    height: 150px;
+  }
+  .Card .ImageContent .CardImage {
+    width: 150px;
+    height: auto;
+  }
+  .Card .CardContent .CardText {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 604px) {
+  .Card {
+    width: 100%;
+    flex-direction: initial;
+  }
+  .Card .ImageContent {
+    background: none;
+    border: none;
+    box-shadow: 2px 2px 2px 0px black;
+    width: 150px;
+    height: 150px;
+  }
+  .Card .ImageContent .CardImage {
+    width: 150px;
+    height: auto;
+  }
+  .Card .CardContent .CardText {
+    font-size: 1.5em;
+  }
+}
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: Modal 0.4s;
+}
+.Modal .ModalContent {
+  border: 2px solid #65ffd4;
+  border-radius: 5px;
+  max-height: 80%;
+  overflow-y: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 7px;
+  min-width: 25vw;
+}
+.Modal .ModalContent .ModalTitle {
+  width: 100%;
+  border-radius: 5px;
+  background: black;
+  color: #65ffd4;
+  font-family: 'Montserrat' !important;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+}
+.Modal .ModalContent .ModalTitle:before {
+  font-family: "icomoon" !important;
+  padding: 0 2px 3px;
+  content: "\E9D9";
+  color: #efe94e !important;
+}
+.Modal .ModalContent .ModalChildren {
+  text-align: center;
+  margin: 10px 0;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.Modal .ModalContent .ModalClose {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  font-weight: 100;
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding: 15px;
+  font-weight: bolder;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 1px black;
+  transition: 0.2s;
+  cursor: pointer;
+  background: transparent;
+  color: #55345b;
+  box-shadow: none;
+}
+.Modal .ModalContent .ModalClose:before {
+  font-family: "icomoon" !important;
+  padding: 0 2px 3px;
+  content: "\EA0D";
+  color: #65ffd4 !important;
+}
+@keyframes changeColor {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: #9d63c9;
+  }
+}
+.Modal .ModalContent .ModalClose:active {
+  transform: scale(0.95);
+}
+@keyframes Modal {
+  from {
+    filter: blur(15px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+@media screen and (max-width: 604px) {
+  .Modal .ModalContent .ModalTitle {
+    font-size: 0.95em;
+    font-weight: 500;
+  }
+  .Modal .ModalContent .ModalClose {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    font-size: 25px;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+  }
+  .Modal .ModalContent .ModalClose:before {
+    font-family: "icomoon" !important;
+    padding: 0 2px 3px;
+    content: "\EA0D";
+    color: #65ffd4 !important;
+  }
+}
+.Menu {
+  background: rgba(85, 52, 91, 0.3);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Menu .titleMenu {
+  color: transparent;
+  height: 100%;
+  padding: 0px 25px 0px 0px;
+  border-radius: 0 30px 30px 0;
+  border-left: 0;
+  display: inline;
+  background: black;
+  cursor: pointer;
+  font-size: 22px;
+  position: relative;
+  font-family: 'Inconsolata';
+}
+.Menu .titleMenu:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 7px;
+  left: 7px   ;
+  right: 0;
+  bottom: 0;
+  height: 65%;
+  width: 86.5%;
+  padding: 0;
+  color: aliceblue;
+  overflow: hidden;
+  border: 2px solid aliceblue;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  animation: type 5s steps(13) infinite, blinkTextCursor 500ms steps(13) infinite;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.Menu .titleMenu:hover::before {
+  color: #65ffd4;
+}
+.Menu .MenuClose {
+  display: none;
+}
+.MenuElements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+.nav-item {
+  height: 100%;
+  width: 16vw;
+}
+.nav-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  font-family: 'Montserrat' !important;
+  border: 2px solid transparent;
+  border-top: 0;
+  border-bottom: 0;
+}
+.nav-item a:before {
+  font-family: "icomoon" !important;
+  padding: 0 2px 3px;
+  content: "\E9D9";
+  color: #efe94e !important;
+}
+.nav-item a:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border-top: 0;
+  border-bottom: 0;
+  color: #65ffd4;
+}
+.nav-item a:hover::before {
+  color: #efe94e !important;
+}
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 87%;
+  }
+  75% {
+    width: 87%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes blinkTextCursor {
+  0% {
+    border-right-color: aliceblue;
+  }
+  100% {
+    border-right-color: transparent;
+  }
+}
+@media screen and (max-width: 769px) {
+  .Menu {
+    height: 75px;
+    background: none;
+  }
+  .Menu .MenuElementsClose {
+    left: -100vw !important;
+  }
+  .Menu .titleMenu {
+    height: 55%;
+    font-size: 25px;
+    padding-right: 30px;
+  }
+  .Menu .MenuElements {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.2s;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .Menu .MenuElements * {
+    color: #55345b;
+    font-weight: bolder;
+    font-size: 1.1em;
+  }
+  .Menu .MenuElements .nav-item {
+    width: 100%;
+    height: auto;
+    margin: 35px 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Menu .MenuElements .nav-item a {
+    height: auto;
+    padding: 15px 0;
+    border-top: 0;
+    border-bottom: 0;
+    color: #65ffd4;
+  }
+  .Menu .MenuClose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 6;
+    background: transparent;
+    font-size: 45px;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+  }
+  .Menu .MenuClose:before {
+    font-family: "icomoon" !important;
+    padding: 0 2px 3px;
+    content: "\EA0D";
+    color: #efe94e !important;
+  }
+  .Menu .MenuOpen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    z-index: 6;
+    background: black;
+    border-radius: 30px 0 0 30px;
+    font-size: 25px;
+    padding: 0px 10px 0 15px;
+    height: 55%;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+  }
+  .Menu .MenuOpen:before {
+    font-family: "icomoon" !important;
+    padding: 0 2px 3px;
+    content: "\E9BD";
+    color: aliceblue !important;
+  }
+}
+.About {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  width: 100%;
+  margin: 20px 0 ;
+  padding: 10px 0;
+  opacity: 0.9;
+}
+.About .AboutImg {
+  grid-column: 3 / 4;
+  border-radius: 0 30px 30px 0;
+  box-shadow: 10px 10px 5px 1px black;
+  width: 200px;
+  height: auto;
+}
+.About .AboutText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: end;
+  padding: 0 15px;
+  grid-column: 2 /3;
+  background: url(/_next/static/images/textura-violeta-95d8dd82729ec0b30bfb787c5c23e649.png);
+  background-size: 18vw;
+  border-radius: 30px 0 0 30px;
+  box-shadow: 10px 10px 5px 1px black;
+}
+@media screen and (max-width: 801px) {
+  .About {
+    grid-template-columns: 1fr 6fr 2fr 1fr;
+  }
+  .About .AboutText {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .About {
+    grid-template-columns: 1fr 6fr 2fr 1fr;
+  }
+  .About .AboutText {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 604px) {
+  .About {
+    grid-template-columns: 1fr 8fr 1fr;
+    position: relative;
+  }
+  .About .AboutImg {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    border-radius: 50%;
+    box-shadow: none;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    bottom: -15%;
+    right: -5%;
+    border: 2px solid #efe94e;
+  }
+  .About .AboutText {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background: #55345b;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 1px black;
+    height: 150px;
+    text-align: start;
+  }
+}
+@media screen and (max-width: 415px) {
+  .About .AboutText {
+    font-size: 15px;
+  }
+}
+.Services {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 8fr 1fr;
+}
+.Services .ServicesTitle {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background: linear-gradient(to right, rgba(240, 248, 255, 0.3), transparent, transparent, transparent, transparent);
+  box-shadow: 5px 5px 15px 1px black;
+  border-radius: 30px;
+  text-shadow: 1.5px 1.5px 1px black;
+  border-radius: 0;
+}
+.Services .ServicesElement {
+  width: 100%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Services .ServicesButton {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding: 15px;
+  font-weight: bolder;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 1px black;
+  transition: 0.2s;
+  cursor: pointer;
+  background: #9d63c9;
+  color: aliceblue;
+}
+@keyframes changeColor {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: #9d63c9;
+  }
+}
+.Services .ServicesButton:active {
+  transform: scale(0.95);
+}
+@media screen and (max-width: 801px) {
+  .Services {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  .Services .ServicesElement {
+    grid-column: 1/4;
+  }
+}
+@media screen and (max-width: 604px) {
+  .Services .ServicesElement {
+    grid-column: 1/4;
+  }
+}
+.Competitions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 25px 0;
+}
+.Competitions .CompetitionsTitle {
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(to right, rgba(240, 248, 255, 0.3), transparent, transparent, transparent, transparent);
+  box-shadow: 5px 5px 15px 1px black;
+  border-radius: 30px;
+  text-shadow: 1.5px 1.5px 1px black;
+  border-radius: 0;
+  padding: 10px 0;
+  margin-bottom: 25px;
+}
+.Competitions .CompetitionsResumeElement {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  width: 100%;
+}
+.Competitions .CompetitionsResumeElement .CompetitionsResume {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px;
+  flex-direction: column;
+  margin: 10px 0;
+  background: linear-gradient(to right, rgba(240, 248, 255, 0.3), transparent, transparent, transparent, transparent);
+  box-shadow: 5px 5px 15px 1px black;
+  border-radius: 30px;
+  text-shadow: 1.5px 1.5px 1px black;
+  border-radius: 5px;
+}
+.Competitions .CompetitionsResumeElement .CompetitionsResume .CompetitionsResumeTitle {
+  text-align: center;
+  background: url(/_next/static/images/crater-0693db4feb0df267657168ce14452d9c.jpg);
+  background-attachment: fixed;
+  background-size: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  color: #65ffd4;
+  border: 2px solid #55345b;
+}
+.Competitions .CompetitionsResumeElement .CompetitionsResume .CompetitionsResumeTitle:before {
+  font-family: "icomoon" !important;
+  padding: 0 2px 3px;
+  content: "\E9D9";
+  color: #efe94e !important;
+}
+.Competitions .CompetitionsResumeElement .CompetitionsResume .CompetitionsDetailsElement {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Competitions .CompetitionsResumeElement .CompetitionsResume .CompetitionsDetailsElement .CompetitionsDetail {
+  border-radius: 5px;
+  padding: 7px;
+  margin: 12px;
+}
+.Competitions .CompetitionsResumeElement .CompetitionsResume .CompetitionsDetailsElement .CompetitionsDetail .CompetitionsDetailTitle {
+  font-family: 'Montserrat' !important;
+}
+.Competitions .CompetitionsResumeElement .CompetitionsResume .CompetitionsDetailsElement .CompetitionsDetail .CompetitionsDetailTitle:before {
+  font-family: "icomoon" !important;
+  padding: 0 2px 3px;
+}
+.Footer {
+  background: black;
+  padding: 25px ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Footer * {
+  font-family: 'Inconsolata';
+}
+.Footer .Contacto {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+.Footer .Contacto div {
+  margin: 10px;
+}
+.Footer .Contacto h3 {
+  margin: 7px 0;
+}
+.Footer .Contacto a {
+  color: #65ffd4;
+}
+.Footer .Contacto a:before {
+  font-family: "icomoon" !important;
+  padding: 0 2px 3px;
+  content: "\E9D9";
+  color: #efe94e !important;
+}
+.Footer .Others {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 35px 0;
+}
+.Footer .Others div {
+  margin: 10px;
+}
+.Footer .Others a {
+  border: 2px solid #65ffd4;
+  padding: 6px;
+  color: #65ffd4;
+  font-family: 'Inconsolata' !important;
+}
+.Footer .Others a:before {
+  font-family: "icomoon" !important;
+  padding: 0 2px 3px;
+  color: #efe94e !important;
+}
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

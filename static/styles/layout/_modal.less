@@ -1,0 +1,86 @@
+ .Modal{
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     width: 100vw;
+     height: 100vh;
+     background: fadeout(black, @fadeout1);
+     z-index: 3;
+     .flex(center);
+
+     animation: Modal .4s;
+     & .ModalContent{
+        //  position: relative;
+        .border(@turquesa);
+        border-radius: @radius3;
+        max-height: 80%;
+        overflow-y: auto;
+        .flex(space-around);
+        flex-direction: column;
+        padding: 7px;
+        min-width: 25vw;
+        // max-width: 60vw;
+        & .ModalTitle{
+            width: 100%;
+            border-radius: @radius3;
+            background: black;
+            color: @turquesa;
+            font-family: @font1 !important;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+            .icon();
+        }
+        & .ModalChildren{
+            // width: 100%;
+            text-align: center;
+            margin: 10px 0;
+            padding: 15px;
+            background: fadeout(black, @fadeout2);
+        }
+        & .ModalClose{
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            .icon("\ea0d", @turquesa);
+            font-size: 50px;
+            font-weight: 100;
+            .btn(transparent);
+            box-shadow: none;
+        }
+     }
+     @keyframes Modal {
+        from{filter: blur(15px);}
+        to{filter: blur(0px);}
+     }
+ }
+ @media screen and (max-width: @tablet3){
+    .Modal
+    {
+        & .ModalContent{
+            & .ModalTitle{
+                font-size: .95em;
+                font-weight: 500;
+            }
+            & .ModalClose{
+                position: absolute;
+                top: 7px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 5;
+                .icon("\ea0d", @turquesa);
+                font-size: 25px;
+                font-weight: 100;
+                // .btn(transparent);
+                margin: 0;
+                padding: 0;
+                font-size: 2em;
+            }
+        }
+    }
+    
+}
+ 

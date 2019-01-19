@@ -1,0 +1,109 @@
+.Card{
+    .flex();
+    flex-direction: column;
+    text-align: center;
+    margin: 15px 5px;
+    padding: 0 15px;
+    .transparent();
+    cursor: pointer;
+    .size(300px, height);
+    & .ImageContent{    
+        @CardImageSize : 150px;
+        .size(@CardImageSize, square);
+        .flex(center);
+        .background();
+        border-radius: 50%;
+        .border(@morado);
+        & .CardImage{
+            .size(@CardImageSize, width);
+        }
+        
+    }
+    & .CardContent{
+        .flex();
+        flex-direction: column;
+        // .size(100%, height);
+        border-radius: 0 0 @radius @radius;
+        & .CardText{
+            font-size: 15px;
+            font-family: @font1;
+            .flex(center);
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+        // & .CardButton{
+        //     width: 100%;
+        //     height: 100%;
+        //     border-radius: 0 0 @radius @radius;
+        //     background: transparent;
+        //     // background: linear-gradient(to right, @white, transparent,transparent,transparent,transparent,transparent);
+        //     color: @morado;
+        //     cursor: pointer;
+        //     font-family: @font1;
+        //     // font-size: 10px;
+        //     font-weight: 800;
+        //     .btn(black, false);
+        // }
+    }
+    
+}
+@media screen and (max-width: @tablet1){
+    .Card{
+        flex-direction: initial;
+        padding: 30px;
+        .size(auto, height);
+        
+        background: none;
+        box-shadow: none;
+        width: 100%;
+        & .ImageContent{
+            @CardImageSize :150px;
+            background: none;
+            border: none;
+            box-shadow: @shadow3;
+            .size(@CardImageSize, square);
+            & .CardImage{
+                .size(@CardImageSize, width);
+            }
+        }
+        & .CardContent{
+            & .CardText{
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+@media screen and (max-width: @tablet2){
+    
+}
+@media screen and (max-width: @tablet3){
+    .Card{
+        width: 100%;
+        flex-direction: initial;
+        // .size(200px, height);
+        & .ImageContent{
+            @CardImageSize :150px;
+            background: none;
+            border: none;
+            box-shadow: @shadow3;
+            .size(@CardImageSize, square);
+            & .CardImage{
+                .size(@CardImageSize, width);
+            }
+        }
+        & .CardContent{
+            & .CardText{
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+@media screen and (max-width: @movil1){
+    
+}
+@media screen and (max-width: @movil2){
+    
+}
+@media screen and (max-width: @movil3){
+    
+}

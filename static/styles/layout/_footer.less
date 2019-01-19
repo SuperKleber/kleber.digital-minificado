@@ -1,0 +1,42 @@
+.Footer{
+    background: black;
+    padding: 25px ;
+    .flex();
+    flex-wrap: wrap;
+    & *{
+        font-family: @font2;
+    }
+    & .Contacto{
+        .flex(flex-start);
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+        & div{
+            margin: 10px;
+        }
+        & h3{
+            margin: 7px 0;
+           
+        }
+        & a{
+            color: @turquesa;
+            .icon();
+        }
+    }
+    & .Others{
+        .flex(flex-start);
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 35px 0;
+        & div{
+            margin: 10px;
+        }
+        & a{
+            .border(@turquesa);
+            padding: 6px;
+            color: @turquesa;
+            font-family: @font2 !important;
+            .icon(false);
+        }
+    }
+}

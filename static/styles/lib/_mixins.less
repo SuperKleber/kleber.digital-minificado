@@ -1,0 +1,149 @@
+//Display
+.flex(@justify-content:space-around){
+    display: flex;
+    justify-content: @justify-content;
+    align-items: center;
+}
+
+
+//Colores
+
+
+//Fonts
+.text-shadow(@color:black){
+    text-shadow: 1px 1px 2.5px @color;
+}
+
+//Bordes
+
+.border(@color:@white, @size: 2px){
+    border: @size solid @color;
+}
+.exceptBorder(@border){
+    & when(@border = right){
+        border-right: none;
+    }
+    & when(@border = left){
+        border-left: none;
+    }
+    & when(@border = top){
+        border-top: none;
+    }
+    & when(@border = bottom){
+        border-bottom: none;
+    }
+}
+.onlyBorder(@border){
+    & when(@border = right){
+        border-left: none;
+        border-top: none;
+        border-bottom: none;
+    }
+    & when(@border = left){
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+    }
+    & when(@border = top){
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+    & when(@border = bottom){
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+//Buttons
+.btn(@type:normal, @animation:true){
+    border: none;
+    margin: 0;
+    padding: 0;
+    padding: 15px;
+    font-weight: bolder;
+    border-radius: @radius3;
+    box-shadow: @shadow2;
+    transition: .2s;
+    cursor: pointer;
+    & when(@type=normal){
+        background: @morado2;
+        color: @white;
+    }
+    & when(@type=transparent){
+        background: transparent;
+        color: @morado;
+    }
+    & when(@type=black){
+        background: black;
+        color: @amarillo;
+    }
+    & when(@type=important){
+        background: transparent;
+        color: @white;
+        
+        text-shadow: @text-shadow;
+        animation: changeColor .5s infinite alternate;
+    }
+    @keyframes changeColor {
+        0%{background: transparent;}
+        // 75%{background: @morado2;}
+        100%{background: @morado2;}
+    }
+    & when(@animation=true){
+        &:active{
+            transform: scale(0.95)
+        }
+    }
+    
+}
+
+//Transparent
+.transparent(@_shadow: @shadow2, @_text-shadow:@text-shadow){
+    background: linear-gradient(to right, fadeout(@white, @fadeout3),transparent,transparent,transparent,transparent);
+    box-shadow: @_shadow;
+    border-radius: @radius;
+    // text-align: center;
+    text-shadow: @_text-shadow;
+}
+
+//img
+.size(@size, @direction: width){
+    // .flex(center);    
+    & when (@direction = width)
+    {
+        width: @size;   
+        height: auto;
+    }
+    & when (@direction = height)
+    {
+        height: @size;
+        width: auto;
+    }
+    & when (@direction = square)
+    {
+        width: @size;
+        height: @size;
+    }
+}
+
+.icon(@icon:"\e9d9", @color:@amarillo){
+    &:before{
+        font-family: "icomoon" !important;
+        padding: 0 2px 3px;
+        & when not (@icon=false){
+            content: @icon;
+        }
+        & when not (@color=false){
+            color: @color !important;
+        }
+    }
+    
+}
+
+.background(@_background: @background){
+    background: @_background;
+    background-attachment: fixed;
+    background-size: 100%;
+}
